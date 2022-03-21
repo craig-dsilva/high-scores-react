@@ -1,0 +1,23 @@
+.list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border: 1px #000 solid;
+  margin-bottom: 1em;
+  padding-right: 1em;
+}
+
+.name,
+.score {
+  display: inline;
+}
+
+.name {
+  grid-column: 2;
+  text-align: end;
+}
+
+.score {
+  grid-column: 3;
+  text-align: end;
+}

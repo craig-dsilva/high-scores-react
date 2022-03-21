@@ -1,23 +1,21 @@
-import logo from "./logo.svg";
+import HighScoreTable from "./HighScoreTable";
+import scores from "./scores";
+
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>High Scores per Country</h1>
+      {scores.map((country, index) => {
+        return (
+          <HighScoreTable
+            countryName={country.name}
+            countryScores={country.scores}
+            key={index}
+          />
+        );
+      })}
     </div>
   );
 }
